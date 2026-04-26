@@ -36,7 +36,10 @@ $items = $pdo->query("SELECT * FROM members ORDER BY created_at DESC")->fetchAll
             <li><a href="manage_interviews.php"><i class="fas fa-microphone-alt"></i> Interviews</a></li>
             <li><a href="manage_curatorial.php"><i class="fas fa-chalkboard-teacher"></i> Curatorial</a></li>
             <li><a href="manage_news.php"><i class="fas fa-newspaper"></i> News</a></li>
+            <li><a href="manage_exhibitions.php"><i class="fas fa-university"></i> Exhibitions</a></li>
+            <li><a href="manage_opportunities.php"><i class="fas fa-bullhorn"></i> Opportunities</a></li>
             <li><a href="manage_calls.php"><i class="fas fa-file-alt"></i> Calls for Papers</a></li>
+            <li><a href="view_submissions.php"><i class="fas fa-file-invoice"></i> Submissions</a></li>
             <li><a href="manage_members.php" class="active"><i class="fas fa-users"></i> Members</a></li>
             <li><a href="manage_subscribers.php"><i class="fas fa-envelope"></i> Subscribers</a></li>
             <li><a href="logout.php" style="margin-top: 2rem; color: #ff6b6b;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>

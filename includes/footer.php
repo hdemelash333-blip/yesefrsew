@@ -63,6 +63,6 @@
     <div id="toastNotification" class="toast-notification"></div>
     <div id="scrollTop" class="scroll-top"><i class="fas fa-arrow-up"></i></div>
 
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

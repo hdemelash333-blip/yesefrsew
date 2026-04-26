@@ -66,6 +66,30 @@ CREATE TABLE IF NOT EXISTS news (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Exhibitions Table
+CREATE TABLE IF NOT EXISTS exhibitions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    venue VARCHAR(255),
+    location VARCHAR(255),
+    dates VARCHAR(255),
+    description TEXT,
+    link VARCHAR(255),
+    image VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Opportunities Table
+CREATE TABLE IF NOT EXISTS opportunities (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    deadline VARCHAR(255),
+    link VARCHAR(255),
+    status ENUM('active', 'closed') DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Subscribers Table
 CREATE TABLE IF NOT EXISTS subscribers (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -124,3 +148,19 @@ CREATE TABLE IF NOT EXISTS members (
 -- Insert a default admin (password: admin123)
 -- Password hashed with BCRYPT
 INSERT INTO admins (username, password, email) VALUES ('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin@yesefersew.org');
+
+-- Sample Data
+INSERT INTO essays (title, slug, excerpt, content, author, status, is_new) VALUES
+('Modernism in Ethiopia: A Historical Perspective', 'modernism-in-ethiopia', 'Exploring the roots of modern art in Ethiopia and its evolution.', 'Full content of the essay about Ethiopian modernism...', 'Dr. Bekele Mekonnen', 'published', TRUE);
+
+INSERT INTO interviews (title, slug, artist_name, excerpt, content, status) VALUES
+('A Conversation with Julie Mehretu', 'julie-mehretu-interview', 'Julie Mehretu', 'Discussing abstraction and the power of line.', 'Full interview content with Julie Mehretu...', 'published');
+
+INSERT INTO calls_for_papers (title, slug, description, deadline_text, publication_date_text, topics, guidelines, status) VALUES
+('Systemic & Institutional Challenges in the Visual Art Sector', 'systemic-challenges-2024', 'YESEFERSEW Journal invites scholars, practitioners, curators, artists, and cultural policy experts to submit original research articles.', 'To be announced', 'To be announced', 'Institutional critique of arts funding models\nBarriers to market access\nInfrastructure gaps in art education', 'Abstract: 300-500 words\nFull Paper: 5,000-8,000 words\nLanguages: English or Amharic', 'active');
+
+INSERT INTO exhibitions (title, venue, location, dates, description, link) VALUES
+('1-54 Contemporary African Art Fair', 'Somerset House', 'London, UK', 'October 2024', 'The leading international art fair dedicated to contemporary art from Africa and its diaspora.', 'https://www.1-54.com/');
+
+INSERT INTO opportunities (title, description, deadline, link, status) VALUES
+('Addis Adwa Residency 2025', 'A 3-month residency program for emerging Ethiopian artists.', 'December 31, 2024', 'https://yesefersew.org/apply', 'active');

@@ -68,24 +68,16 @@ $news_items = $pdo->query("SELECT * FROM news ORDER BY created_at DESC LIMIT 2")
             <h2 class="section-title">Global Art News: Ethiopian Artists on the World Stage</h2>
             <p class="section-text">Tracking the remarkable presence and achievements of Ethiopian visual artists, curators, and cultural practitioners in international exhibitions, biennials, residencies, and collections worldwide.</p>
             <div class="news-grid">
-                <?php if ($news_items): foreach ($news_items as $news): ?>
-                    <div class="news-card">
-                        <i class="fas fa-university news-icon"></i>
-                        <h3><?php echo $news['title']; ?></h3>
-                        <a href="<?php echo $news['link']; ?>" class="btn-outline-light" style="margin-top: 1rem; display: inline-block;">Exhibition Report →</a>
-                    </div>
-                <?php endforeach; else: ?>
-                    <div class="news-card">
-                        <i class="fas fa-university news-icon"></i>
-                        <h3>1-54 Contemporary African Art Fair</h3>
-                        <a href="news.php" class="btn-outline-light" style="margin-top: 1rem; display: inline-block;">Exhibition Report →</a>
-                    </div>
-                    <div class="news-card">
-                        <i class="fas fa-palette news-icon"></i>
-                        <h3>Residency Milestones</h3>
-                        <a href="news.php" class="btn-outline-light" style="margin-top: 1rem; display: inline-block;">View Opportunities →</a>
-                    </div>
-                <?php endif; ?>
+                <div class="news-card">
+                    <i class="fas fa-university news-icon"></i>
+                    <h3>1-54 Contemporary African Art Fair</h3>
+                    <a href="exhibitions.php" class="btn-outline-light" style="margin-top: 1rem; display: inline-block;">Exhibition Report →</a>
+                </div>
+                <div class="news-card">
+                    <i class="fas fa-palette news-icon"></i>
+                    <h3>Residency Milestones</h3>
+                    <a href="opportunities.php" class="btn-outline-light" style="margin-top: 1rem; display: inline-block;">View Opportunities →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -144,13 +136,12 @@ $news_items = $pdo->query("SELECT * FROM news ORDER BY created_at DESC LIMIT 2")
 
     <section id="pillars">
         <div class="container">
-            <h2 class="section-title">Our Five Core Pillars</h2>
-            <div class="pillar-container">
-                <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-laptop-code"></i></div><h3>Tech-Enabled Services</h3><p>Software solutions for art management, distribution, and digital showcasing.</p></div>
-                <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-users"></i></div><h3>Networking</h3><p>Formalizing connections between local and international artists, galleries, and institutions.</p></div>
-                <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-archive"></i></div><h3>Digital Archiving</h3><p>High-quality profiling, standardized catalogs, and professional portfolios.</p></div>
-                <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-newspaper"></i></div><h3>Media & Critique</h3><p>A dedicated source for news, reviews, and critical discourse on Ethiopian contemporary art.</p></div>
-                <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-graduation-cap"></i></div><h3>Education</h3><p>E-learning modules, virtual forums, workshops, and resources for artistic growth.</p></div>
+            <h2 class="section-title">Essential Portals</h2>
+            <div class="network-grid">
+                <div class="network-card"><i class="fas fa-door-open network-icon"></i><h3>Artist Portal <span class="portal-badge">Active</span></h3><p>Portfolio management, exhibition applications, grant listings, and professional development resources.</p><a href="portal_artist.php" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Access Artist Portal →</a></div>
+                <div class="network-card"><i class="fas fa-ticket-alt network-icon"></i><h3>Opportunities Portal</h3><p>Curated listings of residencies, open calls, fellowships, and job opportunities for Ethiopian visual arts professionals.</p><a href="portal_opportunities.php" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Access Opportunities →</a></div>
+                <div class="network-card"><i class="fas fa-calendar-check network-icon"></i><h3>Biennial Registration Portal</h3><p>Register for Addis Adwa Art Biennial 2027 as an exhibiting artist, volunteer, or attendee.</p><a href="portal_biennial.php" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Biennial Registration →</a></div>
+                <div class="network-card"><i class="fas fa-graduation-cap network-icon"></i><h3>E-Learning Portal</h3><p>Access courses on art writing, curatorial practice, art management, and digital marketing for artists.</p><a href="portal_elearning.php" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Start Learning →</a></div>
             </div>
         </div>
     </section>

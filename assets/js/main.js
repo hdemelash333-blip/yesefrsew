@@ -244,14 +244,14 @@
             });
 
             // Journal links - show toast info
-            document.querySelectorAll('.journal-essay-link, .journal-interview-link, .btn-outline-light:not(.open-subscribe-modal):not(.open-register-modal):not(.open-cfp-modal)').forEach(link => {
-                if(!link.classList.contains('open-subscribe-modal') && !link.classList.contains('open-register-modal') && !link.classList.contains('open-cfp-modal')) {
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        showToast('📖 Explore our rich journal archives — full content launching soon.');
-                    });
-                }
-            });
+            // document.querySelectorAll('.journal-essay-link, .journal-interview-link, .btn-outline-light:not(.open-subscribe-modal):not(.open-register-modal):not(.open-cfp-modal)').forEach(link => {
+            //     if(!link.classList.contains('open-subscribe-modal') && !link.classList.contains('open-register-modal') && !link.classList.contains('open-cfp-modal')) {
+            //         link.addEventListener('click', (e) => {
+            //             e.preventDefault();
+            //             showToast('📖 Explore our rich journal archives — full content launching soon.');
+            //         });
+            //     }
+            // });
 
             // Social icons - show toast
             document.querySelectorAll('.social-icon').forEach(icon => {
